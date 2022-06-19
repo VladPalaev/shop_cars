@@ -212,7 +212,9 @@ body {
 	gap: 20px;
 	margin-top: 60px;
 }
-
+.services__picture img {
+	width: 100%;
+}
 .services__picture {
 	cursor: pointer;
 	max-height: 500px;
