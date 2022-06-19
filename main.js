@@ -1,33 +1,19 @@
 'use strict';
 
-// function userSelectNav() {
-// 	listNav.forEach(item => item.classList.remove('active'));
-// 	this.classList.add('active');
-// }
-
-// function userSelectLanguage() {
-// 	listLanguage.forEach(item => item.classList.remove('active'));
-// 	this.classList.add('active');
-// }
-
-function selectActive(listElement) {
+function selectActive(listElements) {
 	return function() {
-		listElement.forEach(item => item.classList.remove('active'));
+		listElements.forEach(item => item.classList.remove('active'));
 		this.classList.add('active');
 	}
 }
 
-function listenerClass(elementClass) {
-	const listElement = document.querySelectorAll(elementClass);
-	listElement.forEach(item => item.addEventListener('click', selectActive(listElement)))
+function listerElement(elementClass) {
+	const listElements = document.querySelectorAll(elementClass);
+	listElements.forEach(item => item.addEventListener('click', selectActive(listElements)));
 }
-// const listNav = document.querySelectorAll('.nav__item');
-// const listLanguage = document.querySelectorAll('.header__language');
-// const listSelectService = document.querySelectorAll('.services__picture');
 
-// listNav.forEach(item => item.addEventListener('click', userSelectNav));
-// listLanguage.forEach(item => item.addEventListener('click', userSelectLanguage));
+listerElement('.nav__link');
+listerElement('.header__language-link');
 
-listenerClass('.header__language');
-listenerClass('.nav__item');
-listenerClass('.services__picture');
+
+
