@@ -12,6 +12,17 @@
 *:after {
 	box-sizing: border-box;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	font-size: inherit;
+}
 
 html {
 	scroll-behavior: smooth;
@@ -25,25 +36,40 @@ body {
 }
 
 .container {
+	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
-	position: relative;
-
 }
 
 .header {
-	min-height: calc(100vh + 20px);
+	position: relative;
+	display: flex;
+	min-height: 100vh;
 	background: var(--clr-gray) url("../img/bg-header.jpg") center center;
-	background-size: cover;
+	/* background-size: cover; */
+	box-shadow: 0 10px 30px var(--clr-black);
 }
 
 .header__wrapper {
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 70px;
 	padding-top: 20px;
+}
 
+.header__logo img{
+	flex-basis: 20%;
+	text-align: left;
+}
+
+.header__wrapper :last-child {
+	flex-basis: 20%;
+	text-align: right;
 }
 
 .nav__list {
@@ -97,7 +123,7 @@ body {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 1.5em;
-	margin: 117px 0 0;
+	margin-top: 270px;
 	text-transform: uppercase;
 	color: var(--clr-white);
 }
@@ -131,7 +157,7 @@ body {
 	top: calc(100vh - 196px / 2);
 	display: flex;
 	justify-content: space-between;
-	gap: 21px;
+	gap: 20px;
 	width: 100%;
 	height: 196px;
 }
@@ -145,19 +171,99 @@ body {
 	padding: 39px;
 	background-color: #fff;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
-	border-radius: 15px;
 }
 
 .advantage__title {
 	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: 0.15em;
-	margin: 0;
 }
 
 .advantage__text {
 	font-size: 18px;
 	font-weight: 400;
 	color: var(--clr-gray);
-	margin: 0;
 }
+
+/* /end advantage */
+
+/* start our services */
+.services {
+	margin-top: 200px;
+}
+
+.services__title {
+	margin-bottom: 15px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.services__link-all-services {
+	color: var(--clr-black);
+	letter-spacing: 0.15em;
+}
+
+.services__flex-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: 20px;
+	margin-top: 60px;
+}
+
+.services__picture {
+	cursor: pointer;
+	max-height: 500px;
+	transition: 0.5s;
+}
+.services__picture.active {
+	position: relative;
+	box-shadow: 1px 1px 10px var(--clr-black);
+}
+
+.services__picture.active::after {
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.7)  url('../img/select-plus.svg') center center no-repeat;
+	opacity: 0;
+	animation: myAnimation 0.5s forwards;
+}
+
+.services__picture.active::before {
+	content: "ANNUAL CHECKUPS FROM YOUR PHYSICIAN KEEP YOU IN GOOD HEALTH";
+	position: absolute;
+	bottom: 5%;
+	z-index: 4;
+	padding: 30px;
+	color: var(--clr-white);
+	font-size: 18px;
+	line-height: 1.5em;
+	letter-spacing: 0.2em;
+	font-weight: 600;
+	opacity: 0;
+	animation: myAnimation 0.5s forwards;
+}
+@keyframes myAnimation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.services__flex-container-title {
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+/* /end our services */

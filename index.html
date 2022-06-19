@@ -14,12 +14,14 @@
 <header class="header">
 	<div class="container">
 		<div class="header__wrapper">
-			<img src="assets/img/logo-company.png" alt="logo-company" width="139">
+			<div class="header__logo">
+				<img src="assets/img/logo-company.png" alt="logo-company" width="139">
+			</div>
 			<!-- /logo company -->
 			<nav class="nav">
 				<ul class="nav__list">
-					<li class="nav__item active"><a href="#" class="nav__link">Main</a></li>
-					<li class="nav__item"><a href="#advantage" class="nav__link">Our services</a></li>
+					<li class="nav__item active"><a href="/" class="nav__link">Main</a></li>
+					<li class="nav__item"><a href="#services" class="nav__link">Our services</a></li>
 					<li class="nav__item"><a href="#" class="nav__link">About</a></li>
 					<li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
 				</ul>
@@ -34,7 +36,7 @@
 		<h1 class="header__title">keeping you on the road with service you can trust</h1>
 		<button class="header__btn">show more</button>
 		<!-- /header__title-and-button -->
-		<section class="advantage" id="advantage">
+		<section class="advantage">
 			<div>
 				<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_3_266)">
@@ -77,6 +79,31 @@
 	</div>
 	<!-- /container -->
 </header>
+<main class="main">
+	<div class="container">
+		<section class="services" id="services">
+			<h2 class="services__title">our services</h2>
+			<a href="" class="services__link-all-services">view all services</a>
+			<!-- service title and text -->
+			<div class="services__flex-container">
+				<div class="services__diagnostic services__item">
+					<div class="services__picture active"><img src="assets/img/service-diagnostic.jpg" alt="service-diagnostic"></div>
+					<h3 class="services__flex-container-title">diagnostic</h3>
+				</div>
+				<div class="services__tires services__item">
+					<div class="services__picture"><img src="assets/img/service-tires.jpg" alt="service-tires"></div>
+					<h3 class="services__flex-container-title">tires & wheels</h3>
+				</div>
+				<div class="services__engines services__item">
+					<div class="services__picture"><img src="assets/img/service-engines.jpg" alt="service-engines"></div>
+					<h3 class="services__flex-container-title">engines</h3>
+				</div>
+			</div>
+			<!-- /service flex block -->
+		</section>
+		<!-- /services -->
+	</div>
+</main>
 	
 
 <script src="main.js"></script>
