@@ -465,12 +465,12 @@ body {
 }
 
 input:focus + .label {
-	transform: translateY(-15px);
+	transform: translateY(-23px);
 	font-size: 12px;
 }
 
 .input:not(:placeholder-shown) + .label {
-	transform: translateY(-15px);
+	transform: translateY(-23px);
 	font-size: 12px;
 }
 
@@ -490,12 +490,12 @@ input:focus + .label {
 }
 
 .textarea:focus + .label {
-	transform: translateY(-15px);
+	transform: translateY(-23px);
 	font-size: 12px;
 }
 
 .textarea:not(:placeholder-shown) + .label {
-	transform: translateY(-15px);
+	transform: translateY(-23px);
 	font-size: 12px;
 }
 /* /end contacts */
