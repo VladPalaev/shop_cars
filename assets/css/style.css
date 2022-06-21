@@ -340,3 +340,46 @@ body {
 
 /* /end services */
 
+/* /start about */
+.about {
+	padding: 117px 0;
+	background-color: #171616;
+}
+
+.about__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about__block {
+	max-width: 505px;
+}
+
+.about__text {
+	margin: 35px 0 40px;
+	font-weight: 600;
+	color: var(--clr-gray);
+	letter-spacing: 0.23em;
+}
+
+.about__link {
+	font-weight: 500;
+	font-size: 18px;
+	color: var(--clr-white);
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+
+.about__link:hover {
+	text-decoration: none;
+}
+
+.about__img {
+	height: 340px;
+}
+.text-white {
+	color: var(--clr-white);
+}
+
+/* /end about */
