@@ -160,8 +160,9 @@ body {
 /* start intro */
 .intro {
 	position: relative;
-	background: url('../img/bg-intro.jpg') center no-repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .intro::after {
@@ -195,3 +196,147 @@ body {
 	line-height: 1.5em;
 }
 /* /end intro */
+
+.section {
+	margin-bottom: 100px;
+}
+
+/* /start info */
+.info {
+	transform: translateY(-50%);
+}
+
+.info__item {
+	padding: 40px;
+	background-color: var(--clr-white);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.info__img {
+	margin-bottom: 20px;
+}
+
+.info__title {
+	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	line-height: 1.5em;
+}
+
+.info__text {
+	color: var(--clr-gray);
+	font-size: 18px;
+}
+/* /end info */
+
+/* /start block */
+.wrapper {
+	display: flex;
+	margin: 0 -10px;
+}
+
+.block {
+	width: 33.33%;
+	padding: 0 10px;
+}
+
+.block__title {
+	margin-bottom: 15px;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	line-height: 1.5em;
+	color: var(--clr-black);
+}
+
+.block__link {
+	display: inline-block;
+	margin-bottom: 60px;
+	letter-spacing: 0.15em;
+	color: var(--clr-black);
+}
+
+.block__link:hover {
+	text-decoration: none;
+}
+/* /end block */
+
+/* /start services */
+
+
+/* /start HOVER item */
+.services__item:hover .services__img {
+	opacity: 1;
+	transform: scale(1);
+}
+.services__item:hover .services__text {
+	transform: translateX(0);
+}
+.services__item:hover .services__content::after {
+	opacity: 1;
+}
+/* /end HOVER item */
+
+
+.services__content {
+	position: relative;
+	height: 500px;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.services__content::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.services__img {
+	position: absolute;
+	top: calc(50% - 100px / 2);
+	left: calc(50% - 100px / 2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	background-color: var(--clr-btn);
+	border-radius: 50%;
+	z-index: 2;
+	opacity: 0;
+	transition: all 0.2s linear;
+	transform: scale(0.3)
+}
+
+.services__text {
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	font-size: 18px;
+	max-width: 270px;
+	font-weight: 600;
+	color: var(--clr-white);
+	letter-spacing: 0.23em;
+	line-height: 1.5em;
+	z-index: 3;
+	transition: all 0.2s linear;
+	transform: translateX(-400px);
+}
+
+.services__title {
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.23em;
+}
+
+/* /end services */
+

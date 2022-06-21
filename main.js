@@ -14,6 +14,3 @@ function listerElement(elementClass) {
 
 listerElement('.nav__link');
 listerElement('.header__language-link');
-
-
-
